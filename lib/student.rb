@@ -1,26 +1,28 @@
 class Student
-  # Remember, you can access your database connection anywhere in this class with DB[:conn]  
+  # Remember, you can access your database connection anywhere in this class with DB[:conn]
   attr_accessor :name, :grade
 
-  @@all = [] 
-  
+  @@all = []
+
   def initialize(name, grade, id = nil)
-    @id = id 
-    @name = name 
-    @grade = grade 
+    @id = id
+    @name = name
+    @grade = grade
 
     @@all << self
   end
 
   def self.create_table()
 
-  def save(name) 
-  end 
+  end
 
-  def self.create(name:, grade:) 
+  def save(name)
+  end
+
+  def self.create(name:, grade:)
     student = Student.new()
     student.save
-    student  
-  end  
-  
+    student
+  end
+
 end
